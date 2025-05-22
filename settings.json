@@ -1,0 +1,87 @@
+{
+    // Configuration Java
+    "java.home": "/path/to/your/jdk17", // Remplacez par votre JDK
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.import.gradle.enabled": true,
+    "java.format.enabled": true,
+    "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+    "java.format.onSave": true,
+    "java.saveActions.organizeImports": true,
+
+    // Formatage du code
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+
+    // Linting avec Checkstyle
+    "java.checkstyle.configuration": "${workspaceFolder}/checkstyle.xml",
+    "java.checkstyle.executeCommandBuffer": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.checkstyle": true
+    },
+
+    // Débogage
+    "debug.console.fontSize": 14,
+    "debug.internalConsoleOptions": "neverOpen",
+    "debug.toolBarLocation": "docked",
+
+    // Extensions spécifiques
+    "material-icon-theme.folders.associations": {
+        "resources": "src",
+        "target": "dist",
+        "lib": "dependencies"
+    },
+    "projectManager.git.baseFolders": ["/path/to/your/projects"],
+    "todo-tree.highlights.enabled": true,
+    "todo-tree.regex.regex": "(//|#|<!--)\\s*(TODO|FIXME|NOTE)\\b",
+
+    // Performances
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.settings": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.metadata": true,
+        "**/bin": true,
+        "**/out": true
+    },
+    "search.exclude": {
+        "**/bin": true,
+        "**/target": true
+    },
+
+    // Intégration Git
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+
+    // Thème et UI
+    "workbench.colorTheme": "Material Theme Palenight",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace'",
+    "editor.fontLigatures": true,
+    "window.zoomLevel": 0,
+
+    // Configuration des extensions
+    "java.test.config": [
+        {
+            "name": "UCC Payment System",
+            "workingDirectory": "${workspaceFolder}",
+            "vmargs": [
+                "-Djava.awt.headless=true"
+            ],
+            "env": {
+                "ENV": "development"
+            }
+        }
+    ],
+    "todo-tree.general.tags": ["TODO", "FIXME", "NOTE", "BUG", "HACK"],
+    "todo-tree.regex.regexCaseSensitive": false
+}
